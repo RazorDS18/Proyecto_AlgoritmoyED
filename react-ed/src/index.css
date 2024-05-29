@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --dark-background: #210518;
+    --dark-text-color: #ffffe5;
+    --dark-hover-color: #d0f2e7;
+    --dark-texth-color: #17181f;
+    --dark-scroll-background: #f1f1f1;
+    --dark-scroll-color: #888;
+    --dark-scroll-hover: #555;
+}
+
+/* Tema Claro */
+:root.light-theme {
+    --light-background: ##bcebdf;
+    --light-text-color: #000000;
+    --light-hover-color: #210518;
+    --dark-texth-color: #d0f2e7;
+    --dark-scroll-background: #555;
+    --dark-scroll-color: #888;
+    --dark-scroll-hover: #f1f1f1;
+}
+
+
+/* Sidebar.css */
+.company-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 10px;
+    color: var(--dark-text-color);
+    text-align: center;
+}
+
+.sidebar-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: var(--dark-background);
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    transition: all 1s;
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    flex: 1;
+    overflow-y: auto;
+    max-height: 55%;
+    margin-top: 10px;
+}
+
+.sidebar-menu::-webkit-scrollbar {
+    width: 10px;
+}
+
+.sidebar-menu::-webkit-scrollbar-track {
+    background: var(--dark-scroll-background);
+    border-radius: 45PX;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb {
+    background: var(--dark-scroll-color);
+    border-radius: 4px;
+}
+
+.sidebar-menu::-webkit-scrollbar-thumb:hover {
+    background: var(--dark-scroll-hover);
+}
+
+.sidebar-item {
+    padding: 10px 20px;
+}
+
+.sidebar-link {
+    color: var(--dark-text-color);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    transition: background 1s;
+    transition: border-radius 2s;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: var(--dark-hover-color);
+    color: var(--dark-texth-color);
+}
+
+.sidebar-link-text {
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+    flex: 1;
+    transition: margin-left 0.3s ease;
+    transition: all 1s;
+}
+
+.logout-button-container {
+    padding: 10px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.logout-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    border: none;
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    transition: all 0.3s;
+}
+
+.logout-button:hover {
+    background-color: var(--dark-scroll-color);
+    color: var(--light-text-color);
+}
+
+.logout-button span {
+    margin-right: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.logout-button svg {
+    font-size: 18px;
+}
+.logout-button .toggle-icon {
+    margin-left: 15px;
+}
+
+/*Barra Lateral Contraida*/
+.sidebar.collapsed {
+    width: 100px;
+}
+
+.toggle-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+    color: var(--dark-text-color);
+    transition: font-size 1s;
+}
+
+.main-content.collapsed {
+    margin-left: 120px;
+}
+
+.theme-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    cursor: pointer;
+    margin-top: auto;
+}
+
+.toggle-icon:hover {
+    font-size: 25px;
+}

@@ -1,0 +1,1 @@
+export const LISTAR_PRODUCTOS_URL = 'http://localhost:9090/apirestproductos/Listar';

@@ -1,0 +1,1 @@
+export const ELIMINAR_ADMINISTRADORES_URL = 'http://localhost:9090/Administradores/Eliminar';

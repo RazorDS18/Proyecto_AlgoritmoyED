@@ -1,0 +1,1 @@
+export const ACTUALIZAR_ADMINISTRADORES_URL = 'http://localhost:9090/Administradores/Actualizar';
